@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EngineerOS • Reports</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="background-gradient"></div>
+
+    <div class="container">
+
+        <!-- ================= HEADER ================= -->
+
+        <header>
+
+            <div class="header-left">
+
+                <h1>📊 EngineerOS</h1>
+
+                <p class="subtitle">
+
+                    Reports & Analytics
+
+                </p>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="date-card">
+
+                    <a href="index.html">
+
+                        ← Back to Dashboard
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= ENGINEER SCORE ================= -->
+
+        <section class="glass mission-card">
+
+            <h2>🏆 Engineer Score</h2>
+
+            <h1 id="engineerScore">
+
+                0%
+
+            </h1>
+
+            <p>
+
+                Overall consistency across all tracked days.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- ================= STREAK ================= -->
+
+        <section class="progress-section">
+
+            <div class="glass streak-card">
+
+                <h3>🔥 Current Streak</h3>
+
+                <span id="currentStreak">
+
+                    0 Days
+
+                </span>
+
+            </div>
+
+            <div class="glass streak-card">
+
+                <h3>⭐ Longest Streak</h3>
+
+                <span id="longestStreak">
+
+                    0 Days
+
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="task-grid">
+
+            <div class="glass task-card">
+
+                <h3>Total Days</h3>
+
+                <h1 id="totalDays">
+
+                    0
+
+                </h1>
+
+            </div>
+
+
+
+            <div class="glass task-card">
+
+                <h3>NoticePulse Days</h3>
+
+                <h1 id="noticeDays">
+
+                    0
+
+                </h1>
+
+            </div>
+
+
+
+            <div class="glass task-card">
+
+                <h3>DSA Completed</h3>
+
+                <h1 id="dsaDays">
+
+                    0
+
+                </h1>
+
+            </div>
+
+
+
+            <div class="glass task-card">
+
+                <h3>Speaking Sessions</h3>
+
+                <h1 id="speakingDays">
+
+                    0
+
+                </h1>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= COMPLETION ================= -->
+
+        <section class="glass reflection">
+
+            <h2>🎯 Completion Rate</h2>
+
+            <br>
+
+            <h4>🛠 Build</h4>
+
+            <div class="progress-bar">
+
+                <div id="buildBar"></div>
+
+            </div>
+
+            <br>
+
+            <h4>🧠 DSA</h4>
+
+            <div class="progress-bar">
+
+                <div id="dsaBar"></div>
+
+            </div>
+
+            <br>
+
+            <h4>📚 Learning</h4>
+
+            <div class="progress-bar">
+
+                <div id="learnBar"></div>
+
+            </div>
+
+            <br>
+
+            <h4>🎤 Speaking</h4>
+
+            <div class="progress-bar">
+
+                <div id="speakBar"></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RECENT REFLECTIONS ================= -->
+
+        <section class="glass reflection">
+
+            <h2>📖 Recent Reflections</h2>
+
+            <div id="reflectionContainer">
+
+                <!-- JS inserts cards here -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= WEEKLY REVIEW ================= -->
+
+        <section class="glass reflection">
+
+            <h2>📅 Weekly Review</h2>
+
+            <div class="reflection-grid">
+
+                <div>
+
+                    <h4>✅ Days Completed</h4>
+
+                    <p id="weeklyCompleted">
+
+                        -
+
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h4>🏆 Strongest Habit</h4>
+
+                    <p id="strongestHabit">
+
+                        -
+
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h4>📈 Needs Improvement</h4>
+
+                    <p id="weakestHabit">
+
+                        -
+
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h4>🔥 Longest Weekly Streak</h4>
+
+                    <p id="weeklyStreak">
+
+                        -
+
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h4>🎯 Next Week Focus</h4>
+
+                    <p id="nextFocus">
+
+                        -
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <section class="buttons">
+
+            <button onclick="location.href='index.html'">
+
+                ← Dashboard
+
+            </button>
+
+        </section>
+
+    </div>
+
+
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/report.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,718 @@
+/* ==========================================
+   EngineerOS
+   Apple Inspired Design
+   ========================================== */
+
+
+/* ---------- Google Font ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+/* ---------- Variables ---------- */
+
+:root{
+
+    --primary:#007AFF;
+
+    --success:#34C759;
+
+    --danger:#FF3B30;
+
+    --purple:#8B5CF6;
+
+    --text:#1F2937;
+
+    --secondary:#6B7280;
+
+    --background:#F5F7FB;
+
+    --card:rgba(255,255,255,.65);
+
+    --border:rgba(255,255,255,.45);
+
+    --shadow:0 15px 45px rgba(31,41,55,.08);
+
+    --radius:22px;
+
+}
+
+
+
+/* ---------- Global ---------- */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* ---------- Background Gradient ---------- */
+
+.background-gradient{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-1;
+
+    background:
+
+        radial-gradient(circle at top left,#dbeafe 0%,transparent 45%),
+
+        radial-gradient(circle at top right,#ede9fe 0%,transparent 45%),
+
+        radial-gradient(circle at bottom,#dcfce7 0%,transparent 45%),
+
+        #F5F7FB;
+
+}
+
+
+
+/* ---------- Container ---------- */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:40px 25px 80px;
+
+}
+
+
+
+/* ---------- Glass Card ---------- */
+
+.glass{
+
+    background:var(--card);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/* ---------- Header ---------- */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+
+header h1{
+
+    font-size:40px;
+
+    font-weight:700;
+
+}
+
+
+.subtitle{
+
+    color:var(--secondary);
+
+    margin-top:8px;
+
+}
+
+
+.date-card{
+
+    padding:16px 22px;
+
+    border-radius:18px;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    font-weight:600;
+
+}
+
+
+
+/* ---------- Mission ---------- */
+
+.mission-card{
+
+    padding:28px;
+
+    margin-bottom:28px;
+
+}
+
+
+.mission-card h2{
+
+    margin-bottom:12px;
+
+}
+
+
+.mission-card p{
+
+    line-height:1.8;
+
+    color:var(--secondary);
+
+}
+
+
+
+/* ---------- Progress ---------- */
+
+.progress-section{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+
+.progress-card,
+
+.streak-card{
+
+    padding:24px;
+
+}
+
+
+.progress-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:16px;
+
+}
+
+
+.progress-bar{
+
+    width:100%;
+
+    height:16px;
+
+    background:#E5E7EB;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+
+#progressFill{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #007AFF,
+
+        #8B5CF6
+
+    );
+
+    transition:.5s;
+
+}
+
+
+.streak-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+#streak{
+
+    margin-top:15px;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+
+
+/* ---------- Task Grid ---------- */
+
+.task-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    margin-bottom:30px;
+
+}
+
+
+.task-card{
+
+    padding:26px;
+
+    transition:.35s;
+
+}
+
+
+.task-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+.task-card h3{
+
+    margin-bottom:8px;
+
+}
+
+
+.task-card p{
+
+    color:var(--secondary);
+
+    margin-bottom:18px;
+
+}
+
+
+
+/* ---------- Textareas ---------- */
+
+textarea{
+
+    width:100%;
+
+    min-height:90px;
+
+    resize:vertical;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:16px;
+
+    padding:16px;
+
+    background:#F9FAFB;
+
+    margin-bottom:18px;
+
+    font-family:inherit;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+
+textarea:focus{
+
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(0,122,255,.12);
+
+}
+
+
+
+/* ---------- Checkboxes ---------- */
+
+label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    font-weight:500;
+
+}
+
+
+input[type="checkbox"]{
+
+    width:18px;
+
+    height:18px;
+
+    accent-color:#007AFF;
+
+}
+
+
+
+/* ---------- Optional ---------- */
+
+.optional-card{
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+}
+
+
+.optional-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:20px;
+
+}
+
+
+
+/* ---------- Reflection ---------- */
+
+.reflection{
+
+    padding:28px;
+
+    margin-bottom:30px;
+
+}
+
+
+.reflection-grid{
+
+    display:grid;
+
+    gap:24px;
+
+    margin-top:22px;
+
+}
+
+
+
+/* ---------- Buttons ---------- */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:18px;
+
+    padding:16px 36px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+#saveButton{
+
+    background:#007AFF;
+
+    color:white;
+
+}
+
+
+#saveButton:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(0,122,255,.25);
+
+}
+
+
+#resetButton{
+
+    background:white;
+
+}
+
+
+#resetButton:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:900px){
+
+    .progress-section{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .task-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .container{
+
+        padding:25px 18px 60px;
+
+    }
+
+    header h1{
+
+        font-size:30px;
+
+    }
+
+    .optional-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================
+   REPORT PAGE
+========================================== */
+
+.stats-card h1{
+
+    font-size:48px;
+
+    margin-top:10px;
+
+    color:var(--primary);
+
+}
+
+#engineerScore{
+
+    font-size:72px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin:20px 0;
+
+}
+
+#reflectionContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.reflection-card{
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+}
+
+.reflection-card h3{
+
+    margin-bottom:15px;
+
+}
+
+.progress-bar{
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+}
+
+.progress-bar div{
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        var(--primary),
+
+        var(--purple)
+
+    );
+
+    transition:.5s;
+
+}
+
+.report-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+.report-stat{
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.report-stat h2{
+
+    font-size:38px;
+
+    margin-top:10px;
+
+    color:var(--primary);
+
+}
+
+@media(max-width:900px){
+
+    .report-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .report-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

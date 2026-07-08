@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EngineerOS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background-gradient"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- ================= HEADER ================= -->
+
+        <header>
+
+            <div class="header-left">
+
+                <h1>🚀 EngineerOS</h1>
+
+                <h3 id="greeting"></h3>
+
+                <p class="subtitle">
+                    Build. Learn. Communicate. Repeat.
+                </p>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="date-card">
+
+                    <span id="currentDate">
+                        Thursday, 9 July
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ================= MISSION ================= -->
+
+        <section class="mission-card glass">
+
+            <h2>Mission</h2>
+
+            <p>
+
+                Become the engineer BNY wants.<br>
+
+                Build AI SaaS products.<br>
+
+                Stay Consistent.
+
+            </p>
+
+        </section>
+
+        <!-- ================= PROGRESS ================= -->
+
+        <section class="progress-section">
+
+            <div class="progress-card glass">
+
+                <div class="progress-top">
+
+                    <h3>Today's Progress</h3>
+
+                    <span id="progressPercentage">
+
+                        0%
+
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div id="progressFill"></div>
+
+                </div>
+
+            </div>
+
+            <div class="streak-card glass">
+
+                <h3>🔥 Current Streak</h3>
+
+                <span id="streak">
+
+                    0 Days
+
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- ================= DAILY TASKS ================= -->
+
+        <section class="task-grid">
+
+            <!-- NoticePulse -->
+
+            <div class="task-card glass">
+
+                <h3>🛠 Build</h3>
+
+                <p>Today's NoticePulse Goal</p>
+
+                <textarea
+                    id="noticeTask"
+                    placeholder="What will you build today?"
+                ></textarea>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="noticeComplete"
+                    >
+
+                    Completed
+
+                </label>
+
+            </div>
+
+            <!-- DSA -->
+
+            <div class="task-card glass">
+
+                <h3>🧠 DSA</h3>
+
+                <p>Today's Problem</p>
+
+                <textarea
+                    id="dsaTask"
+                    placeholder="Example: Two Sum"
+                ></textarea>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="dsaComplete"
+                    >
+
+                    Solved
+
+                </label>
+
+            </div>
+
+            <!-- Learn -->
+
+            <div class="task-card glass">
+
+                <h3>📚 Learn</h3>
+
+                <p>Engineering Concept</p>
+
+                <textarea
+                    id="learnTask"
+                    placeholder="Example: REST APIs"
+                ></textarea>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="learnComplete"
+                    >
+
+                    Learned
+
+                </label>
+
+            </div>
+
+            <!-- Speaking -->
+
+            <div class="task-card glass">
+
+                <h3>🎤 Speak</h3>
+
+                <p>Today's Speaking Topic</p>
+
+                <textarea
+                    id="speakTask"
+                    placeholder="Explain today's concept"
+                ></textarea>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="speakComplete"
+                    >
+
+                    Practiced
+
+                </label>
+
+            </div>
+
+        </section>
+
+        <!-- ================= OPTIONAL ================= -->
+
+        <section class="optional-card glass">
+
+            <h2>Optional Habits</h2>
+
+            <div class="optional-grid">
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Exercise
+
+                </label>
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Read Documentation
+
+                </label>
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Read Book
+
+                </label>
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Drink Water
+
+                </label>
+
+            </div>
+
+        </section>
+
+        <!-- ================= REFLECTION ================= -->
+
+        <section class="reflection glass">
+
+            <h2>Daily Reflection</h2>
+
+            <div class="reflection-grid">
+
+                <div>
+
+                    <h4>Today's Biggest Win</h4>
+
+                    <textarea
+                        id="win"
+                        placeholder="What are you proud of today?"
+                    ></textarea>
+
+                </div>
+
+                <div>
+
+                    <h4>Today's Biggest Blocker</h4>
+
+                    <textarea
+                        id="blocker"
+                        placeholder="What slowed you down?"
+                    ></textarea>
+
+                </div>
+
+                <div>
+
+                    <h4>Tomorrow's First Task</h4>
+
+                    <textarea
+                        id="tomorrow"
+                        placeholder="Your first task tomorrow"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= ACTION BUTTONS ================= -->
+
+        <section class="buttons">
+
+            <button id="saveButton">
+
+                💾 Save Day
+
+            </button>
+
+            <button id="resetButton">
+
+                🔄 Reset
+
+            </button>
+
+            <button id="reportButton"
+                    onclick="location.href='report.html'">
+
+                📊 Reports
+
+            </button>
+
+        </section>
+
+    </div>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
